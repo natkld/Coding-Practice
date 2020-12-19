@@ -1,0 +1,21 @@
+Given the number n > 0. Find the number of divisors of this number. A divisor is a number by which a given number is divided without a remainder.
+Write a function named numberOfDividers that takes the number n and returns the quantity(amount) of divisors of that number.
+
+Дано число n > 0. Найдите количество делителей этого числа. Делитель - это число, на которое данное число делится без остатка.
+Напишите функцию с именем numberOfDividers, которая принимает число n и возвращает количество делителей этого числа.
+
+CODE:
+function numberOfDividers(n){
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+ if (n % i === 0){
+   sum += 1;
+ }
+}
+ return (sum);
+}
+
+console.log(numberOfDividers(1)) // 1; // one divisor - number 1
+console.log(numberOfDividers(3)) // 2; // 2 divisors - numbers 1 & 3
+console.log(numberOfDividers(4)) // 3; // 3 divisors - numbers 1, 2, 4
+console.log(numberOfDividers(12)) // 6. // 6 divisors - numbers 1, 2, 3, 4, 6, 12
