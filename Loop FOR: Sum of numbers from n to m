@@ -1,0 +1,11 @@
+Two numbers n and m are given. Find the sum of all integers from n to m inclusive.
+Write a function called sumFromNToM, which takes two numbers n, m and returns the sum of numbers from n to m. In a solution, use the loop 'for'.
+
+CODE:
+function sumFromNToM(n, m){
+let sum = 0;
+for ( let i = n; i <= m; i++) {
+ sum += i;
+}
+ return sum;
+}
