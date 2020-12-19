@@ -1,0 +1,15 @@
+Given the number n > 0. Find the amount: 1 + 1/2 + 1/3 + 1/4 +... + 1/n
+Write a function called sumOfFractionals, which takes the number n and returns the sum of fractions that have 1 in the numerator and 1 to n in the denominator. 
+In a solution, use the loop 'for'. Round the amount to two decimal places.
+
+CODE:
+function sumOfFractionals(n){
+let sum = 0;
+for (let i = 1; i <= n; i++) {
+ sum += 1 / i;
+}
+ return +sum.toFixed(2);
+}
+console.log(sumOfFractionals(1))  // 1;
+console.log(sumOfFractionals(5))  // 2.28;
+console.log(sumOfFractionals(10)) // 2.93.
