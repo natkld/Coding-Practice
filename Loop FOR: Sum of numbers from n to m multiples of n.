@@ -1,0 +1,13 @@
+Two numbers n and m are given. Find the sum of integers from n to m inclusive, multiples of n.
+Write a function called sumMultN, which takes two numbers n, m and returns the sum of numbers from n to m multiple of n. In a solution, use the loop 'for'.
+
+CODE:
+function sumMultN(n, m){
+let sum = 0;
+for (let i = n; i <= m; i++) {
+ if (i % n === 0) {
+  sum += i;
+ }
+}
+ return sum;
+}
