@@ -1,0 +1,20 @@
+Fibonacci numbers are a sequence in which the first two numbers are 0 and 1, and each subsequent number is the sum of the two previous numbers: 0, 1, 1, 2, 3, 5,...
+Write a function named fibonacciNumbers, which takes the number n (n > = 2) as an argument and returns an array of n Fibonacci numbers.
+
+Числа Фибоначчи - последовательность, в которой первые два числа равны 0 и 1, а каждое последующее число равно сумме двух предыдущих чисел: 0, 1, 1, 2, 3, 5, ...
+Напишите функцию с именем fibonacciNumbers, которая принимает число n (n >= 2) в качестве аргумента и возвращает массив из n чисел Фибоначчи.
+
+CODE:
+function fibonacciNumbers(n){
+let arr = [0, 1];
+let sum = 0;
+for (let i = 1; i <= n - 2; i++) {
+  sum = arr[arr.length-2] + arr[arr.length-1];
+  arr.push(sum);
+}
+ return arr;
+}
+
+console.log(fibonacciNumbers(2))  // [0, 1];
+console.log(fibonacciNumbers(5))  // [0, 1, 1, 2, 3];
+console.log(fibonacciNumbers(7))  // [0, 1, 1, 2, 3, 5, 8].
