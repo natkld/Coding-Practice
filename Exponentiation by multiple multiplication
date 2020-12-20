@@ -1,0 +1,25 @@
+Without using the exponentiation operation, elevate the number a to the degree n.
+a^(n  )=  a*a*a*...*a
+Write a function called power, which takes the numbers a and n as arguments and returns a to the power of n (a and n are integers of non-negative numbers).
+In a solution, use the for loop.
+The exponential operation and methods of the Math object cannot be used in this task.
+
+Не пользуясь операцией возведения в степень, возвести число a в степень n.
+ a^(n  )=  a*a*a*...*a
+
+Напишите функцию с именем power, которая принимает числa a и n в качестве аргументов и возвращает значение a в степени n (a и n - целые неотрицательные числа). 
+В решении используйте цикл for. 
+В этом задании нельзя использовать операцию возведения в степень и методы объекта Math.
+
+CODE:
+function power(a, n){
+let mult = 1;
+ for (let i = 1; i <= n; i++) {
+  mult *= a;
+ }
+ return mult;
+} 
+console.log(power(3, 3)) // 27
+console.log(power(3, 0)) // 1
+console.log(power(0, 0)) // 1
+console.log(power(2, 5)) // 32
