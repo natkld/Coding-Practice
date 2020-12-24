@@ -1,0 +1,38 @@
+The frog princess eats 3 more mosquitoes daily than on the previous day. 
+Determine on what day the number of mosquitoes eaten will exceed 1000 if n mosquitoes were eaten on the first day.
+Write a function named frogPrincess that takes the number n (the number of mosquitoes on the first day) 
+and returns the number of days the frog will eat 1000 mosquitoes.
+In the solution, use the do while loop.
+Examples:
+
+function frogPrincess (1) must return 26;
+function frogPrincess (12) must return 23;
+function frogPrincess (99) must return 10.
+function frogPrincess (100) must return 9.
+function frogPrincess (1000) must return 1.
+
+Царевна-лягушка съедает ежедневно на 3 комара больше, чем в предыдущий день. 
+Определите, в какой день количество съеденных комаров превысит 1000, если в первый день было съедено n комаров.
+Напишите функцию с именем frogPrincess, которая принимает число n (количество комаров в первый день) и возвращает количество дней,
+в течение которых лягушка съест 1000 комаров.
+В решении используйте цикл do while.
+Примеры:
+
+функция frogPrincess(1) должна возвратить 26;
+функция frogPrincess(12) должна возвратить 23;
+функция frogPrincess(99) должна возвратить 10.
+функция frogPrincess(100) должна возвратить 9.
+функция frogPrincess(1000) должна возвратить 1.
+
+CODE 1:
+function frogPrincess(n){
+  let sum = 0;
+  let days = 0;
+  do {
+    sum = sum + n;   //1 + 4
+    days++;          //1  2 
+    n = n + 3;       //4  7
+  } while (sum <= 1000)
+  return days;
+  }
+  
