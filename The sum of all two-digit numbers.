@@ -16,3 +16,15 @@ function sumOfTwoDigitsNumbers(){
  } while (x <= 99)
    return sum;
 }
+
+CODE 2:
+function sumNumbers(a, b){
+  let sum = 0;
+  let x = a;
+  do {
+    sum += x;
+    x++;
+  } while (x <= b)
+  return sum;
+}
+console.log(sumNumbers(10, 99));
