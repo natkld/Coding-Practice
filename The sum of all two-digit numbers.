@@ -1,0 +1,18 @@
+Find the sum of all positive integers of two digits.
+Write a function named sumOfTwoDigitsNumbers, which returns the sum of numbers from 10 to 99 inclusive.
+In the solution, use the do while loop.
+
+Найдите сумму всех положительных целых двухзначных чисел.
+Напишите функцию с именем sumOfTwoDigitsNumbers, которая возвращает сумму чисел от 10 до 99 включительно. 
+В решении используйте цикл do while.
+
+CODE 1:
+function sumOfTwoDigitsNumbers(){
+  let sum = 0;
+  let x = 10;
+  do {
+   sum += x;
+   x++;
+ } while (x <= 99)
+   return sum;
+}
