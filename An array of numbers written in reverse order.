@@ -20,7 +20,6 @@ CODE 1:
 function arrayOfDigits(n){
 let arr = [];
 let b;
-let sum = 0;
 do {
  b = n % 10;
   arr.push(b);
