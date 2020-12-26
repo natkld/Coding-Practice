@@ -1,0 +1,53 @@
+Given a positive integer. Determine if this number contains the digit "2."
+Write a function with the name doesNumberContain2, which takes the number n as an argument and returns true if the number contains 2, and false otherwise.
+String and array methods are not allowed. In the solution, use the do while loop.
+Examples:
+
+the function doesNumberContain2 (1520) must return true;
+the function doesNumberContain2 (114876) must return false;
+function doesNumberContain2 (22222) must return true.
+
+Дано целое положительное число. Определите, содержит ли данное число цифру "2".
+Напишите функцию с именем doesNumberContain2, которая принимает в качестве аргумента число n и возвращает true, если число содержит цифру 2, и false - в противном случае. 
+Запрещено использование методов строк и массивов. В решении используйте цикл do while.
+Примеры:
+
+функция doesNumberContain2(1520) должна возвратить true;
+функция doesNumberContain2(114876) должна возвратить false;
+функция doesNumberContain2(22222) должна возвратить true.
+
+CODE 1:
+function doesNumberContain2(n){
+let b;
+do {
+b = n % 10;
+if (b === 2) return true;
+n = (n - b) / 10;
+} while (n >= 1)
+ return false;
+}
+
+Все тесты пройдены успешно
+PassСоздана функция doesNumberContain2
+PassИспользуется оператор do while
+PassНе используются методы строк и массивов
+PassФункция возвращает верный результат true для аргумента 25055
+PassФункция возвращает верный результат false для аргумента 75810
+PassФункция возвращает верный результат true для аргумента 89216
+PassФункция возвращает верный результат true для аргумента 9821
+PassФункция возвращает верный результат false для аргумента 57167
+PassФункция возвращает верный результат false для аргумента 18517
+PassФункция возвращает верный результат true для аргумента 29692
+PassФункция возвращает верный результат true для аргумента 24471
+PassФункция возвращает верный результат false для аргумента 71890
+PassФункция возвращает верный результат true для аргумента 28090
+PassФункция возвращает верный результат false для аргумента 35687
+PassФункция возвращает верный результат true для аргумента 22614
+PassФункция возвращает верный результат false для аргумента 7767
+PassФункция возвращает верный результат false для аргумента 6781
+PassФункция возвращает верный результат false для аргумента 39111
+PassФункция возвращает верный результат false для аргумента 1850
+PassФункция возвращает верный результат true для аргумента 97429
+PassФункция возвращает верный результат false для аргумента 53437
+PassФункция возвращает верный результат true для аргумента 22673
+PassФункция возвращает верный результат true для аргумента 60524
