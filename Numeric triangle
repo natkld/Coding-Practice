@@ -1,0 +1,51 @@
+Write a function with the name numericalTriangle, which takes the number n as an argument and returns a triangle of numbers 1 to n separated by a space.
+All but the last lines end with the\n line translation symbol.
+For example, for n = 5, a string must be obtained:
+
+"1\n2 2\n3 3 3\n4 4 4 4\n5 5 5 5 5"
+
+When output to the console, such a line is displayed as a "triangle" of numbers:
+Note: when checking the solution in tests, the line translation symbol is not displayed.
+Examples:
+
+function numericalTriangle (1) must return '1';
+function numericalTriangle (3) must return "1\n2 2\n3 3 3."
+
+Напишите функцию с именем numericalTriangle, которая принимает число n в качестве аргумента и возвращает треугольник из чисел от 1 до n, разделенных пробелом. 
+Все строки кроме последней, заканчиваются символом \n перевода строки.
+Например, для n = 5, должна быть получена строка:
+
+"1\n2 2\n3 3 3\n4 4 4 4\n5 5 5 5 5"
+
+При выводе в консоль такая строка отображается как "треугольник" из чисел:
+Замечание: при проверке решения в тестах символ перевода строки не отображается.
+Примеры:
+
+функция numericalTriangle(1) должна возвратить: "1";
+функция numericalTriangle(3) должна возвратить: "1\n2 2\n3 3 3".
+
+CODE 1:
+function numericalTriangle(n){
+let str = '';
+for (let i = 1; i <= n; i++){
+  for (let j = 1; j < i + 1; j++){
+  str = str + i + ' ';
+}
+  str = str.trim();
+  str += '\n'
+}
+  return str.trim();
+}
+
+Все тесты пройдены успешно
+PassСоздана функция numericalTriangle
+PassФункция для аргумента 3 возвращает верный результат "1 2 2 3 3 3"
+PassФункция для аргумента 3 возвращает верный результат "1 2 2 3 3 3"
+PassФункция для аргумента 7 возвращает верный результат "1 2 2 3 3 3 4 4 4 4 5 5 5 5 5 6 6 6 6 6 6 7 7 7 7 7 7 7"
+PassФункция для аргумента 8 возвращает верный результат "1 2 2 3 3 3 4 4 4 4 5 5 5 5 5 6 6 6 6 6 6 7 7 7 7 7 7 7 8 8 8 8 8 8 8 8"
+PassФункция для аргумента 2 возвращает верный результат "1 2 2"
+PassФункция для аргумента 3 возвращает верный результат "1 2 2 3 3 3"
+PassФункция для аргумента 2 возвращает верный результат "1 2 2"
+PassФункция для аргумента 4 возвращает верный результат "1 2 2 3 3 3 4 4 4 4"
+PassФункция для аргумента 8 возвращает верный результат "1 2 2 3 3 3 4 4 4 4 5 5 5 5 5 6 6 6 6 6 6 7 7 7 7 7 7 7 8 8 8 8 8 8 8 8"
+PassФункция для аргумента 9 возвращает верный результат "1 2 2 3 3 3 4 4 4 4 5 5 5 5 5 6 6 6 6 6 6 7 7 7 7 7 7 7 8 8 8 8 8 8 8 8 9 9 9 9 9 9 9 9 9"
