@@ -1,0 +1,50 @@
+Write a function with the name numericalTable, which takes the numbers n and m as arguments and returns a table of numbers from 1 to n. 
+Each row contains m numbers separated by a space. All but the last lines end with the\n line translation symbol.
+For example, for n = 4, m = 3, a string must be obtained:
+
+"1 1 1\n2 2 2\n3 3 3\n4 4 4"
+
+When output to the console, such a row is displayed as a table: (4 rows are displayed, containing numbers from 1 to 4, 3 numbers in each row).
+Note: when checking the solution in tests, the line translation symbol is not displayed.
+Examples:
+
+function numericalTable (1, 6) must return "1 1 1 1 1 1";
+function numericalTable (3, 5) must return "1 1 1 1 1\n2 2 2 2 2\n3 3 3 3 3."
+
+Напишите функцию с именем numericalTable, которая принимает числа n и m в качестве аргументов и возвращает таблицу чисел от 1 до n. 
+Каждая строка содержит m чисел, разделенных пробелом. Все строки кроме последней, заканчиваются символом \n перевода строки.
+Например, для n = 4, m = 3 должна быть получена строка:
+
+"1 1 1\n2 2 2\n3 3 3\n4 4 4"
+
+При выводе в консоль такая строка отображается как таблица: (выводятся 4 строки, содержащие числа от 1 до 4, по 3 числа в каждой строке).
+Замечание: при проверке решения в тестах символ перевода строки не отображается.
+Примеры:
+
+функция numericalTable(1, 6) должна возвратить: "1 1 1 1 1 1";
+функция numericalTable(3, 5) должна возвратить: "1 1 1 1 1\n2 2 2 2 2\n3 3 3 3 3".
+
+function numericalTable(n, m){
+let str = '';
+  for (let i = 1; i <= n; i++){
+    for (let j = 1; j <= m; j++){
+      str = str + i + ' ';
+    }
+    str = str.trim();
+    str += '\n';
+  }
+  return str.trim();
+}
+
+Все тесты пройдены успешно
+PassСоздана функция numericalTable
+PassФункция для аргументов (4, 3) возвращает верный результат "1 1 1 2 2 2 3 3 3 4 4 4"
+PassФункция для аргументов (1, 9) возвращает верный результат "1 1 1 1 1 1 1 1 1"
+PassФункция для аргументов (3, 9) возвращает верный результат "1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3"
+PassФункция для аргументов (10, 3) возвращает верный результат "1 1 1 2 2 2 3 3 3 4 4 4 5 5 5 6 6 6 7 7 7 8 8 8 9 9 9 10 10 10"
+PassФункция для аргументов (2, 8) возвращает верный результат "1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2"
+PassФункция для аргументов (2, 4) возвращает верный результат "1 1 1 1 2 2 2 2"
+PassФункция для аргументов (9, 2) возвращает верный результат "1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9"
+PassФункция для аргументов (9, 3) возвращает верный результат "1 1 1 2 2 2 3 3 3 4 4 4 5 5 5 6 6 6 7 7 7 8 8 8 9 9 9"
+PassФункция для аргументов (9, 7) возвращает верный результат "1 1 1 1 1 1 1 2 2 2 2 2 2 2 3 3 3 3 3 3 3 4 4 4 4 4 4 4 5 5 5 5 5 5 5 6 6 6 6 6 6 6 7 7 7 7 7 7 7 8 8 8 8 8 8 8 9 9 9 9 9 9 9"
+PassФункция для аргументов (8, 2) возвращает верный результат "1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8"
