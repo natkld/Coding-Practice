@@ -1,0 +1,56 @@
+Write a function named iSymbInString that takes the string str and the symbol symb as arguments and returns true,
+if there is at least one symb character in the string, and false otherwise.
+The solution must use a break statement. String methods are not allowed.
+
+Instruction. Cycle through the line, and if the character you are looking for encounters, set some variable to true and interrupt the loop.
+Examples:
+
+function iSymbInString ("abcd," "b") must return true;
+function iSymbInString ("abcd," "f") must return false.
+
+Напишите функцию с именем iSymbInString, которая принимает строку str и символ symb в качестве аргументов и возвращает true, 
+если в строке встречается хотя бы один символ symb, и false в противном случае.
+В решении необходимо использовать оператор break. Запрещено использование методов строк.
+
+Указание. Пройдите циклом по строке, и если встретится искомый символ, присвойте некоторой переменной значение true и выполните прерывание цикла.
+Примеры:
+
+функция iSymbInString("abcd", "b") должна возвратить true;
+функция iSymbInString("abcd", "f") должна возвратить false.
+
+CODE 1:
+function iSymbInString(str, symb){
+let result = false;
+for (let i = 0; i < str.length; i++) {
+  if (str[i] === symb) {
+  result = true;
+  break;
+  }
+}
+  return result;
+}
+
+Все тесты пройдены успешно
+PassСоздана функция iSymbInString
+PassИспользуется оператор break
+PassНе используются методы
+PassФункция возвращает верный результат: для аргументов ("incomprehensibility", "n") получен результат true
+PassФункция возвращает верный результат: для аргументов ("surreptitious", "t") получен результат true
+PassФункция возвращает верный результат: для аргументов ("uncharacteristically", "z") получен результат false
+PassФункция возвращает верный результат: для аргументов ("abc0!$%^&*()-=/+,.", "+") получен результат true
+PassФункция возвращает верный результат: для аргументов ("surreptitious", "l") получен результат false
+PassФункция возвращает верный результат: для аргументов ("grandmother", "t") получен результат true
+PassФункция возвращает верный результат: для аргументов ("tomorrow", "y") получен результат false
+PassФункция возвращает верный результат: для аргументов ("expensive", "y") получен результат false
+PassФункция возвращает верный результат: для аргументов ("thousand", "m") получен результат false
+PassФункция возвращает верный результат: для аргументов ("tomorrow", "i") получен результат false
+PassФункция возвращает верный результат: для аргументов ("grandmother", "e") получен результат true
+PassФункция возвращает верный результат: для аргументов ("people", "n") получен результат false
+PassФункция возвращает верный результат: для аргументов ("phone number", "e") получен результат true
+PassФункция возвращает верный результат: для аргументов ("grandmother", "f") получен результат false
+PassФункция возвращает верный результат: для аргументов ("seventeen", "d") получен результат false
+PassФункция возвращает верный результат: для аргументов ("grandmother", "k") получен результат false
+PassФункция возвращает верный результат: для аргументов ("grandmother", "l") получен результат false
+PassФункция возвращает верный результат: для аргументов ("supercalifragilisticexpialidocious day", "x") получен результат true
+PassФункция возвращает верный результат: для аргументов ("people", "o") получен результат true
+PassФункция возвращает верный результат: для аргументов ("tomorrow", "y") получен результат false
