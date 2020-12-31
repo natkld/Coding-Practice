@@ -1,0 +1,76 @@
+There is enough money available on ATM in nominal value 10, 20, 50, 100, 200 and 500 dollars.
+You are given money in nominal value of n with 1<=n<=1500.
+Try to find minimal number of notes that must be used to repay in dollars, or output -1 if it is impossible.
+Good Luck!!!
+
+На банкомате достаточно денег в номинальной стоимости 10, 20, 50, 100, 200 и 500 долларов.
+Вы получаете деньги в номинальном значении n с 1 < = n < = 1500.
+Попробуйте найти минимальное количество нот, которые необходимо использовать для погашения в долларах, или вывести -1, если это невозможно.
+Удачи!!!
+
+CODE 1:
+function solve(n) {
+const av = [500, 200, 100, 50, 20, 10];
+let result = [];
+let count = 0;
+  if (n % 10 === 0) {
+    for (let i = 0; i < av.length; i++){
+     let note = av[i]; 
+      while(n - note >= 0) {
+         n -= note;
+       result.push(note);
+        count++
+      }
+    }
+ } else { return -1}
+  return count;
+ }
+ 
+ console.log(solve(770))  // 4;
+ console.log(solve(550))  // 2;
+ console.log(solve(10))   // 1;
+ console.log(solve(1250)  // 4;
+ console.log(solve(125))  // -1;
+ console.log(solve(666))  // -1;
+ console.log(solve(42))   // -1;
+ 
+ CODE 2:
+ function solve(n) {
+  if (n % 10) return -1
+  return [500, 200, 100, 50, 20, 10].reduce((s, v) => {
+    let ans = n / v | 0
+    n %= v
+    return s + ans
+  }, 0)
+}
+
+CODE 3:
+function solve(n) {
+  let counter = 0;
+  [500, 200, 100, 50, 20, 10].forEach(item => {
+    counter += Math.floor(n / item)
+    n = n % item
+  })
+  return n ? -1 : counter
+}
+
+CODE 4:
+function solve(n) {
+  let result = 0;
+  for (let denomination of [500, 200, 100, 50, 20, 10]) {
+    result += ~~(n/denomination);
+    n %= denomination;
+  }
+  
+  return n == 0 ? result : -1;
+}
+
+CODE 5:
+const solve = n =>
+  (n % 10) ? -1 : [500, 200, 100, 50, 20, 10].reduce((pre, val) => (pre += n / val ^ 0, n %= val, pre), 0);
+  
+CODE 6:
+const solve=n=>n%10?-1:n?1+solve(n-[500,200,100,50,20,10].filter(x=>x<=n)[0]):0
+
+CODE 7:
+const solve = n => n%10 ? -1 : n ? solve( n - [500,200,100,50,20,10].find( v => v<=n ) ) + 1 : 0 ;
