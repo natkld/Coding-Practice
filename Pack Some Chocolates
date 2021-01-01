@@ -1,0 +1,88 @@
+Make Chocolates
+Haloween is around the corner and we have to distribute chocolates. We need to assemble a parcel of goal grams of chocolates. 
+The goal can be assumed to be always a positive integer value.
+
+There are small chocolates (2 grams each) and big chocolates (5 grams each)
+To reach the goal, the chocolates (big and small) must be used as-is, meaning, the chocolates cannot be broken into smaller pieces
+Maximize the use of big chocolates that are available to achieve the desired goal. And only then should you proceed to use the small chocolates.
+NOTE: "Maximize" does not imply you have to use all the available big chocolates before using the small chocolates
+For example, consider the goal of 6, and big=1, small=3. Using the existing one big chocolate, it is not possible to achieve the remainder of the weight of 1. Therefore, avoid using the big chocolate. Use the existing 3 small chocolates and achieve the goal.
+Determine the number of small chocolates that are required to achieve the desired parcel weight.
+
+Write a function make_chocolates that will accept three integer values as arguments, in the following order:
+
+small -> number of small chocolates available
+big -> number of big chocolates available
+goal -> the desired weight of the final parcel
+The function should return the number of small chocolates required to achieve the goal. The function should return -1 only if the goal cannot be achieved by any possible combination of big chocolates and small chocolates.
+
+Example
+make_chocolates (4, 1, 13) => 4  
+make_chocolates (4, 1, 14) => -1  
+make_chocolates (2, 1, 7) => 1  
+
+# using the big chocolate prevents goal 
+# accomplishment, therefore don't use it!
+make_chocolates (3, 1, 6) => 3  
+
+Сделать шоколад
+Халоуин за углом, и мы должны раздавать шоколад. Нам нужно собрать посылку целевых граммов шоколада. 
+Можно предположить, что цель всегда является положительным целым значением.
+
+Есть маленькие шоколадки (2 грамма каждый) и большие шоколадки (5 граммов каждый)
+Чтобы достичь цели, шоколадные конфеты (большие и маленькие) должны использоваться как есть, то есть шоколадные конфеты не могут быть разбиты на более мелкие части
+Максимизируйте использование больших шоколадных конфет, которые доступны для достижения желаемой цели. И только тогда вы должны начать использовать маленькие шоколадки.
+ПРИМЕЧАНИЕ: "Максимизировать" не означает, что вы должны использовать все доступные большие шоколадки, прежде чем использовать маленькие шоколадки
+Например, рассмотрим цель 6, а большая = 1, малая = 3. Используя существующий один большой шоколад, невозможно достичь оставшейся части веса 1. Поэтому избегайте использования большого шоколада. Используйте существующие 3 маленьких шоколада и достичь цели.
+Определите количество мелких шоколадных конфет, необходимых для достижения требуемого веса посылки.
+
+Запишите make_chocolates функции, которая примет три целочисленных значения в качестве аргументов, в следующем порядке:
+
+небольшое - > количество доступных небольших шоколадных конфет
+большое - > количество доступных больших шоколадных конфет
+цель - > желаемый вес конечного участка
+Функция должна вернуть количество небольших шоколадных конфет, необходимых для достижения цели. Функция должна вернуться -1 только в том случае, если цель не может быть достигнута каким-либо возможным сочетанием больших шоколадных конфет и маленьких шоколадных конфет.
+
+Пример
+make_chocolates (4, 1, 13) => 4
+make_chocolates (4, 1, 14) = > -1
+make_chocolates (2, 1, 7) => 1
+
+# использование большого шоколада предотвращает цель
+# достижение, поэтому не используйте его!
+make_chocolates (3, 1, 6) => 3
+
+CODE 1:
+function makeChocolates(small, big, goal) {
+  for (let s = 0; s <= small; s++) {
+    for (let b = 0; b <= big; b++) {
+      if (b * 5 + s * 2 === goal) return s
+    }
+  }
+  return -1
+}
+console.log(makeChocolates(4, 1, 13))  // 4;
+console.log(makeChocolates(4, 1, 14))  // -1;
+console.log(makeChocolates(2, 1, 7))   // 1;
+console.log(makeChocolates(3, 1, 6))   // 3;
+console.log(makeChocolates(8, 0, 7))   // -1;
+console.log(makeChocolates(8, 0, 7))   // -1;
+
+CODE 2:
+function makeChocolates(s,b,n) {
+  let bigs = Math.min(n/5|0,b);
+  n -= 5*bigs;
+  if(n%2 && bigs) n+=5;
+  let smalls = Math.min(n/2|0, s);
+  return n-2*smalls ? -1 : smalls;
+}
+
+CODE 3:
+`function makeChocolates(small, big, goal) {
+  let max_big = Math.min(big, Math.floor(goal / 5));
+  max_big -= (goal - max_big * 5) % 2;
+  let req_small = Math.floor((goal - max_big * 5) / 2);
+  return (small >= req_small && max_big > -1) ? req_small : -1;
+}`
+
+makeChocolates=(s,b,g,m,n)=>s<(n=(g-(m=((m=Math.min(b,Math.floor(g/5)))-(g-m*5)%2))*5)>>1)||(m<0)?-1:n
