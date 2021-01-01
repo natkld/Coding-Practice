@@ -1,0 +1,50 @@
+Напишите функцию isValid, которое проверяет, содержит ли аргумент value значение NaN.
+Если аргумент является NaN, возвратить строку "Value is not a number".
+В противном случае возвратить строку "Value is valid".
+Используйте в решении метод Number.isNaN(value)
+Примеры:
+функция isValid(NaN) должна возвратить "Value is not a number";
+функция isValid('abc' * 3) должна возвратить "Value is not a number";
+функция isValid(NaN + 1) должна возвратить "Value is not a number";
+функция isValid(0/0) должна возвратить "Value is not a number";
+функция isValid('abc' + 3) должна возвратить "Value is valid";
+функция isValid(25) должна возвратить "Value is valid";
+функция isValid(1/0) должна возвратить "Value is valid";
+функция isValid('abc') должна возвратить "Value is valid".
+
+Write the function isValid, which checks whether the value argument contains the value NaN.
+If the argument is NaN, return the string "Value is not a number."
+Otherwise, return the string "Value is valid."
+Use the Number.isNaN (value) method in the solution
+Examples:
+the function isValid (NaN) must return "Value is not a number";
+isValid function ('abc' * 3) must return "Value is not a number";
+the function isValid (NaN + 1) must return "Value is not a number";
+function isValid (0/0) must return "Value is not a number";
+isValid function ('abc' + 3) must return "Value is valid";
+function isValid (25) must return "Value is valid";
+function isValid (1/0) must return "Value is valid";
+isValid function ('abc') must return "Value is valid."
+
+CODE 1:
+function isValid(value){
+if (Number.isNaN(value) === true) return 'Value is not a number'
+else return 'Value is valid'
+}
+
+Все тесты пройдены успешно
+PassСоздана функция isValid
+PassВключает метод Number.isNaN
+PassФункция возвращает верный результат для аргумента 5
+PassФункция возвращает верный результат для аргумента -4
+PassФункция возвращает верный результат для аргумента -2
+PassФункция возвращает верный результат для аргумента -3.1113597688742622
+PassФункция возвращает верный результат для аргумента 8.761492981487692
+PassФункция возвращает верный результат для аргумента -1.2432060379415555
+PassФункция возвращает верный результат для аргумента aaa
+PassФункция возвращает верный результат для аргумента 1/0
+PassФункция возвращает верный результат для аргумента 'a' + 12
+PassФункция возвращает верный результат для аргумента NaN
+PassФункция возвращает верный результат для аргумента 0/0
+PassФункция возвращает верный результат для аргумента "NaN"
+PassФункция возвращает верный результат для аргумента NaN + 5
