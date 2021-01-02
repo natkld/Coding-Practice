@@ -1,0 +1,27 @@
+Write the function countNaN, which takes the array arr as an argument and returns the number of array members that have the value NaN.
+Examples:
+the function countNaN ([NaN, 1, NaN + 1, "a" * 2]) must return 3, since this array contains three elements with the value NaN;
+function countNaN (['hello', 'Hello' * 5]) must return 1;
+function countNaN ([NaN + 1]) must return 1;
+function countNaN ([1, 2]) must return 0;
+function countNaN ([]) must return 0.
+
+Напишите функцию countNaN, которая принимает массив arr в качестве аргумента и возвращает количество элементов массива, имеющих значение NaN.
+Примеры:
+функция countNaN([NaN, 1, NaN + 1, "a" * 2]) должна возвратить 3, так как данный массив содержит три элемента, имеющих значение NaN;
+функция countNaN(['hello', 'Hello' * 5]) должна возвратить 1;
+функция countNaN([NaN + 1]) должна возвратить 1;
+функция countNaN([1, 2]) должна возвратить 0;
+функция countNaN([]) должна возвратить 0.
+
+CODE 1:
+function countNaN(arr){
+let count = 0
+for(let i = 0; i < arr.length; i++) {
+ if (Number.isNaN(arr[i]) === true){
+ count++
+ } 
+}
+return count
+}
+
