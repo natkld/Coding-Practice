@@ -1,0 +1,13 @@
+function countInfinity(arr){
+let count = 0
+for (let i = 0; i < arr.length; i++) {
+  if (isFinite(arr[i]) === false) {
+  count++
+  }
+}
+return count
+}
+
+console.log(countInfinity([Infinity, 1/0, -10/0, 12]))  // 3;
+console.log(countInfinity([1, 100, 10, -10]))       // 0;
+console.log(countInfinity([Infinity, NaN]))  // 2;
