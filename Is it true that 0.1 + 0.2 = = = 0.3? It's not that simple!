@@ -1,0 +1,29 @@
+Write the function isSumEqualsNumber, which takes three fractional numbers a, b, c as arguments, and checks whether
+that the sum of the two fractional numbers is equal to the third fractional number, i.e. whether the sum of the numbers a and b is equal to the number c.
+The function must return true (if the sum of the numbers after rounding is the third number) or false otherwise.
+Remark. Round the sum of the numbers and the third number to two characters in the fractional part using the toFixed (n) method.
+Example:
+function isSumEqualsNumber (0.1, 0.2, 0.3) must return true.
+
+Напишите функцию isSumEqualsNumber, которая принимает три дробных числа a, b, c в качестве аргументов, и проверяет, верно ли, 
+что сумма двух дробных чисел равна третьему дробному числу, т.е. равна ли сумма чисел a и b числу c.
+Функция должна возвратить true (если сумма чисел после округления равна третьему числу) или false - в противном случае.
+Замечание. Выполните округление суммы чисел и третьего числа до двух знаков в дробной части с помощью метода toFixed(n).
+Пример:
+функция isSumEqualsNumber(0.1, 0.2, 0.3) должна возвратить true.
+
+CODE 1:
+function isSumEqualsNumber(a, b, c){
+return ((a + b).toFixed(2) === c.toFixed(2))? true : false
+}
+
+Все тесты пройдены успешно
+PassСоздана функция isSumEqualsNumber
+PassФункция возвращает верный результат "true" для аргументов (0.1, 0.2, 0.3)
+PassФункция возвращает верный результат "true" для аргументов (-0.1, -0.2, -0.3)
+PassФункция возвращает верный результат "true" для аргументов (0.2, 0.4, 0.6)
+PassФункция возвращает верный результат "true" для аргументов (-0.2, -0.4, -0.6)
+PassФункция возвращает верный результат "true" для аргументов (0.3, 0.6, 0.9)
+PassФункция возвращает верный результат "true" для аргументов (0.4, 0.8, 1.2)
+PassФункция возвращает верный результат "true" для аргументов (0.41, 0.81, 1.22)
+PassФункция возвращает верный результат "false" для аргументов (0.41, 0.81, 1.23)
