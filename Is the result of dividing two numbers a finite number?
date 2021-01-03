@@ -1,0 +1,45 @@
+Write the function checkingForFinite, which takes two numbers a and b as arguments,
+divides the number a by the number b and checks the result of dividing (partial numbers) by the limb.
+The function must return true if the result is a finite number and false otherwise.
+Examples:
+function checkingForFinite (4, 2) must return true;
+function checkingForFinite (3, 0) must return false;
+function checkingForFinite (-1, 0) must return false.
+
+Напишите функцию checkingForFinite, которая принимает два числа a и b в качестве аргументов, 
+выполняет деление числа a на число b и проверяет результат деления (частное чисел) на конечность. 
+Функция должна возвратить true, если результат - конечное число, и false - в противном случае.
+Примеры:
+функция checkingForFinite(4, 2) должна возвратить true;
+функция checkingForFinite(3, 0) должна возвратить false;
+функция checkingForFinite(-1, 0) должна возвратить false.
+
+function checkingForFinite(a, b){
+  return (Number.isFinite(a/b) === true)? true : false
+}
+
+Все тесты пройдены успешно
+PassСоздана функция checkingForFinite
+PassВключает isFinite
+PassФункция возвращает верный результат "true" для аргументов (1, 2)
+PassФункция возвращает верный результат "true" для аргументов (-10, 2)
+PassФункция возвращает верный результат "true" для аргументов (1, 3)
+PassФункция возвращает верный результат "true" для аргументов (null, 3)
+PassФункция возвращает верный результат "true" для аргументов (true, 3)
+PassФункция возвращает верный результат "true" для аргументов (false, 3)
+PassФункция возвращает верный результат "true" для аргументов (false, true)
+PassФункция возвращает верный результат "true" для аргументов (1, Infinity)
+PassФункция возвращает верный результат "true" для аргументов (1, -Infinity)
+PassФункция возвращает верный результат "false" для аргументов ('a', 2)
+PassФункция возвращает верный результат "false" для аргументов (NaN, NaN)
+PassФункция возвращает верный результат "false" для аргументов (NaN, 1)
+PassФункция возвращает верный результат "false" для аргументов (1, 0)
+PassФункция возвращает верный результат "false" для аргументов (-1, 0)
+PassФункция возвращает верный результат "false" для аргументов (1, null)
+PassФункция возвращает верный результат "false" для аргументов (null, null)
+PassФункция возвращает верный результат "false" для аргументов (null, undefined)
+PassФункция возвращает верный результат "false" для аргументов (1, false)
+PassФункция возвращает верный результат "false" для аргументов (true, false)
+PassФункция возвращает верный результат "false" для аргументов (Infinity, 1000)
+PassФункция возвращает верный результат "false" для аргументов (Infinity, Infinity)
+PassФункция возвращает верный результат "false" для аргументов (-Infinity, Infinity)
