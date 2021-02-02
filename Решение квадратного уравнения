@@ -1,0 +1,63 @@
+Values of coefficients of square equation a, b, c are given. Find the roots of the equation, or return the message "There are no roots."
+a^(2 ) x+bx+c=0,где a,b,c-some numbers,a≠0
+Recall that to find the roots of the square equation, you need to find a discriminant by the formula:
+D = b^(2 )– 4ac
+If D < 0, the equation has no roots. Otherwise, the roots of the equation can be found by the formulas:
+x_1=  (-b + √D)/2a
+x_2=  (-b - √D)/2a
+Write a function named quadraticEquation that takes the values ​ ​ of the variables a, b, c as arguments and returns the roots of the equation in the form of an array [x1, x2],
+or the message "There are no roots."
+Examples:
+function quadraticEquation (1, 2, 1) must return [-1, -1];
+function quadraticEquation (5, 6, 1) must return [-0.2, -1];
+function quadraticEquation (1, 1, 1) must return "There are no roots"
+
+
+Даны значения коэффициентов квадратного уравнения a, b, c. Найдите корни уравнения, или верните сообщение "There are no roots".
+a^(2 ) x+bx+c=0,где a,b,c-некоторые числа,a≠0
+Напомним, что для нахождения корней квадратного уравнения надо найти дискриминант по формуле:
+D = b^(2 )– 4ac
+Если D < 0, уравнение корней не имеет. В противном случае корни уравнения можно найти по формулам:
+x_1=  (-b + √D)/2a
+x_2=  (-b - √D)/2a
+Напишите функцию с именем quadraticEquation, которая принимает значения переменных a, b, c в качестве аргументов и возвращает корни уравнения в виде массива [x1, x2], 
+или сообщение "There are no roots".
+Примеры:
+функция quadraticEquation(1, 2, 1) должна возвратить [-1, -1];
+функция quadraticEquation(5, 6, 1) должна возвратить [-0.2, -1];
+функция quadraticEquation(1, 1, 1) должна возвратить "There are no roots"
+
+CODE 1:
+function quadraticEquation(a, b, c){
+let D = Math.pow(b, 2) - 4 * a * c;
+  if (D < 0) {
+  return "There are no roots"
+  }else{
+let x1 = (-b + Math.sqrt(D)) / (2 * a);
+let x2 = (-b - Math.sqrt(D)) / (2 * a);
+   return [x1, x2] 
+   }
+}
+
+Все тесты пройдены успешно
+PassСоздана функция quadraticEquation
+PassФункция возвращает верный результат "There are no roots" для аргументов (6, 3, 4)
+PassФункция возвращает верный результат [0.3830951894845301,-0.78309518948453] для аргументов (10, 4, -3)
+PassФункция возвращает верный результат [0.86332495807108,-0.46332495807108] для аргументов (10, -4, -4)
+PassФункция возвращает верный результат [0,-0.375] для аргументов (8, 3, 0)
+PassФункция возвращает верный результат "There are no roots" для аргументов (3, 1, 4)
+PassФункция возвращает верный результат "There are no roots" для аргументов (5, -4, 4)
+PassФункция возвращает верный результат "There are no roots" для аргументов (2, -3, 4)
+PassФункция возвращает верный результат [0.7245330321551275,-0.6134219210440164] для аргументов (9, -1, -4)
+PassФункция возвращает верный результат "There are no roots" для аргументов (7, 2, 3)
+PassФункция возвращает верный результат "There are no roots" для аргументов (1, 1, 1)
+PassФункция возвращает верный результат [1.4430004681646913,-0.6930004681646913] для аргументов (4, -3, -4)
+PassФункция возвращает верный результат "There are no roots" для аргументов (1, 1, 4)
+PassФункция возвращает верный результат "There are no roots" для аргументов (6, -2, 4)
+PassФункция возвращает верный результат [4.23606797749979,-0.2360679774997898] для аргументов (1, -4, -1)
+PassФункция возвращает верный результат "There are no roots" для аргументов (5, 4, 1)
+PassФункция возвращает верный результат [1,-0.2857142857142857] для аргументов (7, -5, -2)
+PassФункция возвращает верный результат [0,-4] для аргументов (1, 4, 0)
+PassФункция возвращает верный результат "There are no roots" для аргументов (7, 0, 4)
+PassФункция возвращает верный результат "There are no roots" для аргументов (7, -3, 4)
+PassФункция возвращает верный результат [1.4770329614269007,-0.6770329614269007] для аргументов (5, -4, -5)
