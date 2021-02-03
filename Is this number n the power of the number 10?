@@ -1,0 +1,48 @@
+Write a function named isPowerOfTen that takes a non-negative number n as an argument and returns true if n is a power of 10, or false,
+otherwise.
+The number n is a power of 10 if there is an integer k such that 10 * * k = n.
+Specifies the solution. The method Math.log10 (n) returns the decimal (base 10) logarithm of the number n. I.e. Math.log10 (n) is the degree to which the number 10,
+to get the number n.
+Thus, if Math.log10 (n) is an integer, then n is a power of 10.
+Examples:
+function isPowerOfTen (10) must return true; (since Math.log10 (10) = 1 is an integer)
+function isPowerOfTen (100) must return true; (since Math.log10 (100) = 2 is an integer)
+function isPowerOfTen (0.1) must return true; (since Math.log10 (0.1) = -1 is an integer)
+function isPowerOfTen (20) must return false; (since Math.log10 (20) =  1.3010299956639813 is not an integer)
+
+Напишите функцию с именем isPowerOfTen, которая принимает неотрицательное число n в качестве аргумента и возвращает true, если n является степенью числа 10, или false, 
+в противном случае.
+Число n является степенью числа 10, если существует целое число k, такое что 10 ** k = n.
+Указание к решению. Метод Math.log10(n) возвращает десятичный (по основанию 10) логарифм числа n. Т.е. Math.log10(n) - это степень, в которую надо возвести число 10, 
+чтобы получить число n.
+Таким образом, если Math.log10(n) - это целое число, значит, n является степенью числа 10.
+Примеры:
+функция isPowerOfTen(10) должна возвратить true; (так как Math.log10(10) = 1 - целое число)
+функция isPowerOfTen(100) должна возвратить true; (так как Math.log10(100) = 2 - целое число)
+функция isPowerOfTen(0.1) должна возвратить true; (так как Math.log10(0.1) = -1 - целое число)
+функция isPowerOfTen(20) должна возвратить false; (так как Math.log10(20) = 1.3010299956639813 - не целое число)
+
+CODE 1:
+function isPowerOfTen(n){
+return (Math.log10(n) % 1 === 0)
+}
+
+Все тесты пройдены успешно
+PassСоздана функция isPowerOfTen
+PassФункция возвращает верный результат "false" для аргумента 389
+PassФункция возвращает верный результат "false" для аргумента 915
+PassФункция возвращает верный результат "false" для аргумента 87
+PassФункция возвращает верный результат "false" для аргумента 374
+PassФункция возвращает верный результат "false" для аргумента 229
+PassФункция возвращает верный результат "false" для аргумента 598
+PassФункция возвращает верный результат "false" для аргумента 614
+PassФункция возвращает верный результат "false" для аргумента 795
+PassФункция возвращает верный результат "false" для аргумента 253
+PassФункция возвращает верный результат "false" для аргумента 16
+PassФункция возвращает верный результат "true" для аргумента 10
+PassФункция возвращает верный результат "true" для аргумента 100
+PassФункция возвращает верный результат "true" для аргумента 1000
+PassФункция возвращает верный результат "true" для аргумента 10000
+PassФункция возвращает верный результат "true" для аргумента 0.1
+PassФункция возвращает верный результат "true" для аргумента 0.01
+PassФункция возвращает верный результат "true" для аргумента 0.00001
