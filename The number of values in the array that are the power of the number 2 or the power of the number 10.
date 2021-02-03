@@ -1,0 +1,35 @@
+Write the function countPowersInArray, which takes the array arr as an argument and returns the number of elements of the array that are the power of the number 2 
+or the power of the number 10.
+Examples:
+the function countPowersInArray ([10, 100, 0.1, 4, 8]) must return 5, since 10, 100, 0.1 are the power of 10, and the numbers 4 and 8 are the power of 2.
+function countPowersInArray ([1, -10, 0]) must return 1; (only 1 is degree 10 and degree 2)
+function countPowersInArray ([0]) must return 0.
+
+Напишите функцию countPowersInArray, которая принимает массив arr в качестве аргумента и возвращает количество элементов массива, являющихся степенью числа 2 
+или степенью числа 10.
+Примеры:
+функция countPowersInArray([10, 100, 0.1, 4, 8]) должна возвратить 5, так как 10, 100, 0.1 - являются степенью числа 10, а числа 4 и 8 являются степенью числа 2.
+функция countPowersInArray([1, -10, 0]) должна возвратить 1; (только 1 является степенью 10 и степенью 2)
+функция countPowersInArray([0]) должна возвратить 0.
+
+CODE 1:
+function countPowersInArray(arr){
+let count = 0;
+for (let i = 0; i < arr.length; i++){
+  if (Math.log10(arr[i]) % 1 === 0 || Math.log2(arr[i]) % 1 === 0)
+    count++
+}
+  return count
+}
+
+Все тесты пройдены успешно
+PassСоздана функция countPowersInArray
+PassФункция возвращает для массива [10, 100, 1000, 2, 5] верный результат 4
+PassФункция возвращает для массива [2, 4, 8, 0.5, 0.25, 0.125, 16, 32, 10] верный результат 9
+PassФункция возвращает для массива [10, 2, 9, 12] верный результат 2
+PassФункция возвращает для массива [1, 2, 3, 4] верный результат 3
+PassФункция возвращает для массива [1, 2, 32, 1000, 500] верный результат 4
+PassФункция возвращает для массива [1000, 1024, 16, 0.1, 5000, 512] верный результат 5
+PassФункция возвращает для массива [0] верный результат 0
+PassФункция возвращает для массива [] верный результат 0
+PassФункция возвращает для массива [-1000, -1024, -16, -0.1, 5000, -512] верный результат 0
