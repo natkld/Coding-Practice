@@ -1,0 +1,53 @@
+We'll teach you how to talk to Kuzu. Let him round the exact values like people do.
+The exact value - fractional number - is stored in the variable temperatureExact.
+Get the string "Outside the window is 32.3 degrees Celsius. That is almost 33"
+Write a function named temperatureOutside that takes a positive integer temperatureExact (exact temperature value)
+as an argument and returns the string as above.
+Example:
+temperatureOutside (35.6) must return "Outside the window is 35.6 degrees Celsius. That is almost 36";
+
+Научим говорить робота Кузю. Пусть он округляет точные значения так, как это делают люди.
+Точное значение — дробное число — хранится в переменной temperatureExact.
+Получите строку вида "Outside the window is 32.3 degrees Celsius. That is almost 33"
+Напишите функцию с именем temperatureOutside, которая принимает целое положительное число temperatureExact (точное значение температуры) 
+в качестве аргумента и возвращает строку, как указано выше.
+Пример:
+функция temperatureOutside(35.6) должна возвратить "Outside the window is 35.6 degrees Celsius. That is almost 36";
+
+CODE 1:
+function temperatureOutside(temperatureExact) {
+  return `Outside the window is ${temperatureExact} degrees Celsius. That is almost ${Math.ceil(temperatureExact)}`
+}
+
+Все тесты пройдены успешно
+PassСоздана функция temperatureOutside
+PassФункция для аргумента 30.9 возвращает верный результат "Outside the window is 30.9 degrees Celsius. That is almost 31"
+PassФункция для аргумента 32.5 возвращает верный результат "Outside the window is 32.5 degrees Celsius. That is almost 33"
+PassФункция для аргумента 10 возвращает верный результат "Outside the window is 10 degrees Celsius. That is almost 10"
+PassФункция для аргумента 13.1 возвращает верный результат "Outside the window is 13.1 degrees Celsius. That is almost 14"
+PassФункция для аргумента 24 возвращает верный результат "Outside the window is 24 degrees Celsius. That is almost 24"
+PassФункция для аргумента 10.8 возвращает верный результат "Outside the window is 10.8 degrees Celsius. That is almost 11"
+PassФункция для аргумента 23.2 возвращает верный результат "Outside the window is 23.2 degrees Celsius. That is almost 24"
+PassФункция для аргумента 26.1 возвращает верный результат "Outside the window is 26.1 degrees Celsius. That is almost 27"
+PassФункция для аргумента 32.5 возвращает верный результат "Outside the window is 32.5 degrees Celsius. That is almost 33"
+PassФункция для аргумента 5.7 возвращает верный результат "Outside the window is 5.7 degrees Celsius. That is almost 6"
+PassФункция для аргумента 5.9 возвращает верный результат "Outside the window is 5.9 degrees Celsius. That is almost 6"
+PassФункция для аргумента 15.5 возвращает верный результат "Outside the window is 15.5 degrees Celsius. That is almost 16"
+PassФункция для аргумента 20.7 возвращает верный результат "Outside the window is 20.7 degrees Celsius. That is almost 21"
+PassФункция для аргумента 38.8 возвращает верный результат "Outside the window is 38.8 degrees Celsius. That is almost 39"
+PassФункция для аргумента 30.3 возвращает верный результат "Outside the window is 30.3 degrees Celsius. That is almost 31"
+PassФункция для аргумента 23.3 возвращает верный результат "Outside the window is 23.3 degrees Celsius. That is almost 24"
+PassФункция для аргумента 39.3 возвращает верный результат "Outside the window is 39.3 degrees Celsius. That is almost 40"
+PassФункция для аргумента 0.2 возвращает верный результат "Outside the window is 0.2 degrees Celsius. That is almost 1"
+PassФункция для аргумента 24.3 возвращает верный результат "Outside the window is 24.3 degrees Celsius. That is almost 25"
+PassФункция для аргумента 36.7 возвращает верный результат "Outside the window is 36.7 degrees Celsius. That is almost 37"
+PassФункция для аргумента 26.2 возвращает верный результат "Outside the window is 26.2 degrees Celsius. That is almost 27"
+PassФункция для аргумента 13.5 возвращает верный результат "Outside the window is 13.5 degrees Celsius. That is almost 14"
+PassФункция для аргумента 3.3 возвращает верный результат "Outside the window is 3.3 degrees Celsius. That is almost 4"
+PassФункция для аргумента 31.6 возвращает верный результат "Outside the window is 31.6 degrees Celsius. That is almost 32"
+PassФункция для аргумента 4.1 возвращает верный результат "Outside the window is 4.1 degrees Celsius. That is almost 5"
+PassФункция для аргумента 4.1 возвращает верный результат "Outside the window is 4.1 degrees Celsius. That is almost 5"
+PassФункция для аргумента 39.8 возвращает верный результат "Outside the window is 39.8 degrees Celsius. That is almost 40"
+PassФункция для аргумента 19.9 возвращает верный результат "Outside the window is 19.9 degrees Celsius. That is almost 20"
+PassФункция для аргумента 23.6 возвращает верный результат "Outside the window is 23.6 degrees Celsius. That is almost 24"
+PassФункция для аргумента 20.4 возвращает верный результат "Outside the window is 20.4 degrees Celsius. That is almost 21"
