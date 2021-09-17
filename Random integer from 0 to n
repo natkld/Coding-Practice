@@ -1,0 +1,44 @@
+Task:
+Math.random () returns a partial number between 0 (inclusive) and 1 (non-exclusive).
+Write a function with the name integerFrom0ToN, which takes a positive integer n as the argument and
+returns a random integer from 0 to n inclusive.
+Examples:
+integerFrom0To100 returns 50 (any integer from 0 to 50);
+integerFrom0To100 returns 30 (any integer from 0 to 30);
+integerFrom0To100 returns 100 (any integer from 0 to 1000);
+
+the rule applies:
+function getRndInteger(min, max) {
+return Math.floor(Math.random() * (max - min) ) + min;
+}
+therefore:
+
+
+Задание:
+Math.random() возвращает слущайное число в диапазоне от 0 (включитнельно)до 1 (не квлючительно).
+Напишите функцию с именем integerFrom0ToN, которая принимает целое положительное число n в качестве аргумента и
+возвращает случайное целое число от 0 до n включительно.
+Примеры:
+функция integerFrom0To100 возвращает 50  (любое целое число от 0 до 50);
+функция integerFrom0To100 возвращает 30  (любое целое число от 0 до 30);
+функция integerFrom0To100 возвращает 100 (любое целое число от 0 до 1000);
+
+действует правило:
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+поэтому:
+
+
+My code is:
+function integerFrom0ToN(n){
+return Math.floor(Math.random() * n);
+}
+
+Tests:
+Создана функция integerFrom0ToN
+Включает метод random
+Функция возвращает целое число от 0 до 56
+Функция возвращает целое число от 0 до 43
+Функция возвращает целое число от 0 до 19
+Функция возвращает целое число от 0 до 55
