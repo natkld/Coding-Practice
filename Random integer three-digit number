@@ -1,0 +1,42 @@
+Task:
+Math.random () returns a partial number between 0 (inclusive) and 1 (non-exclusive).
+Write a function named integerFrom100To999 that returns a random number between 100 and 999 inclusive.
+Examples:
+integerFrom0To100 returns 100 (any integer from 100 to 999);
+integerFrom0To100 returns 999 (any integer from 100 to 999).
+integerFrom0To100 returns 744 (any integer from 100 to 999);
+
+the rule applies:
+function getRndInteger(min, max) {
+return Math.floor(Math.random() * (max - min) ) + min;
+}
+therefore:
+
+
+Задание:
+Math.random() возвращает слущайное число в диапазоне от 0 (включитнельно)до 1 (не квлючительно).
+Напишите функцию с именем integerFrom100To999, которая возвращает случайное число от 100 до 999 включительно.
+Примеры:
+функция integerFrom0To100 возвращает 100 (любое целое число от 100 до 999);
+функция integerFrom0To100 возвращает 999   (любое целое число от 100 до 999);
+функция integerFrom0To100 возвращает 744  (любое целое число от 100 до 999);
+
+действует правило:
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+поэтому:
+
+
+My code is:
+function integerFrom100To999(){
+return Math.floor(Math.random() * 899) + 100;
+}
+
+Tests:
+Создана функция integerFrom100To999
+Включает метод random
+Функция возвращает целое число от 100 до 999
+Функция возвращает целое число от 100 до 999
+Функция возвращает целое число от 100 до 999
+Функция возвращает целое число от 100 до 999
