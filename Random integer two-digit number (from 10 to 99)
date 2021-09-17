@@ -1,0 +1,40 @@
+Task:
+Math.random () returns a partial number between 0 (inclusive) and 1 (non-exclusive).
+Write a function named integerFrom0To100 that returns a random number from 10 to 99 inclusive.
+Examples:
+integerFrom0To100 returns 10 (any integer from 1 to 99);
+integerFrom0To100 returns 99 (any integer from 1 to 99);
+integerFrom0To100 returns 74 (any integer from 1 to 99);
+
+the rule applies:
+function getRndInteger(min, max) {
+return Math.floor(Math.random() * (max - min) ) + min;
+}
+therefore:
+
+Задание:
+Math.random() возвращает слущайное число в диапазоне от 0 (включитнельно)до 1 (не квлючительно).
+Напишите функцию с именем integerFrom0To100, которая возвращает случайное число от 10 до 99 включительно.
+Примеры:
+функция integerFrom0To100 возвращает 10 (любое целое число от 1 до 99);
+функция integerFrom0To100 возвращает 99   (любое целое число от 1 до 99);
+функция integerFrom0To100 возвращает 74  (любое целое число от 1 до 99);
+
+действует правило:
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+поэтому:
+
+My code is:
+function integerFrom10To99(){
+return Math.floor(Math.random() * 89) + 10;
+}
+
+Tests:
+Создана функция integerFrom10To99
+Включает метод random
+Функция возвращает целое число от 10 до 99
+Функция возвращает целое число от 10 до 99
+Функция возвращает целое число от 10 до 99
+Функция возвращает целое число от 10 до 99
