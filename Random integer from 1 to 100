@@ -1,0 +1,29 @@
+Task:
+Math.random () returns a partial number between 0 (inclusive) and 1 (non-exclusive).
+Write a function named integerFrom0To100 that returns a random number between 1 and 100 inclusive.
+Examples:
+integerFrom0To100 returns 100 (any integer from 1 to 100);
+integerFrom0To100 returns 1 (any integer from 1 to 100);
+integerFrom0To100 returns 67 (any integer from 1 to 100);
+
+Задание:
+Math.random() возвращает слущайное число в диапазоне от 0 (включитнельно)до 1 (не квлючительно).
+Напишите функцию с именем integerFrom0To100, которая возвращает случайное число от 1 до 100 включительно.
+Примеры:
+функция integerFrom0To100 возвращает 100 (любое целое число от 1 до 100);
+функция integerFrom0To100 возвращает 1   (любое целое число от 1 до 100);
+функция integerFrom0To100 возвращает 67  (любое целое число от 1 до 100);
+
+My code:
+function integerFrom1To100(){
+return Math.floor(Math.random() * 100) + 1;
+}
+
+
+Tests:
+Создана функция integerFrom1To100
+Включает метод random
+Функция возвращает целое число от 1 до 100
+Функция возвращает целое число от 1 до 100
+Функция возвращает целое число от 1 до 100
+Функция возвращает целое число от 1 до 100
